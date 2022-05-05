@@ -6,7 +6,7 @@ def main():
     window.resizable(False, False)
     window.title('Rock, Paper, Scissors against Computer')
     widgets = GUI(window)
-    window.mainloop()
+    window.mainloop(__str__,
 
 def game(p_input):
     comp_score = 0
