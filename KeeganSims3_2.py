@@ -4,7 +4,7 @@ def main():
     window = Tk()
     window.geometry('300x100')
     window.resizable(False, False)
-
+    window.title('Rock, Paper, Scissors against Computer')
     widgets = GUI(window)
     window.mainloop()
 
