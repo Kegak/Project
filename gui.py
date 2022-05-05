@@ -17,10 +17,8 @@ class GUI:
         self.frame_top.pack()
 
         self.frame_middle = Frame(self.window)
-        self.label = StringVar()
-        self.label.set('')
-        self.label_output = Label(self.frame_middle, textvariable=self.label)
-        self.label.pack()
+        self.label = Label(self.window, text='')
+        self.label.pack(side='bottom', pady=10)
 
         self.frame_bottom = Frame(self.window)
         self.button_submit = Button(self.frame_bottom, text='SUBMIT', command=self.clicked)
@@ -30,5 +28,5 @@ class GUI:
     def clicked(self):
         thing = self.radio_1.get()
         p = Game(thing)
-        self.label.set(p)
+        self.label.config(text=f'{p}')
         self.radio_1.set('0')
