@@ -1,6 +1,13 @@
 import random
 class Game:
+    """
+    Sets up a class for the rock paper scissors to run on
+    """
     def __init__(self, p_input):
+        """
+        Method that allows the user to enter a rock, paper,
+        scissors input.
+        """
         self.__p_input = p_input
         comp_score = 0
         p_score = 0
@@ -31,6 +38,10 @@ class Game:
 
 
     def __str__(self):
+        """
+        This method generates a computer input, and compares it to
+        the player input, it then determines a winner
+        """
         c_input = random.randint(1, 3)
         if c_input == 1:
             c_input = 'paper'

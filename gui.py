@@ -3,6 +3,12 @@ from KeeganSims3_2 import *
 from game import *
 class GUI:
     def __init__(self, window):
+        """
+        Method that generates a gui window, has options for rock,
+        paper, scissors, and a submit button. Generates a string
+        telling the player if they win or not after they click
+        submit
+        """
         self.window = window
 
         self.frame_top = Frame(self.window)
@@ -26,6 +32,9 @@ class GUI:
         self.frame_bottom.pack()
 
     def clicked(self):
+        """
+        Method that fills in the label when clicked and runs game.py
+        """
         thing = self.radio_1.get()
         p = Game(thing)
         self.label.config(text=f'{p}')

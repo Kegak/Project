@@ -1,14 +1,21 @@
 from gui import *
 import random
 def main():
+    """"
+    Creates the basic dimensions for the gui window
+    """
     window = Tk()
     window.geometry('300x100')
     window.resizable(False, False)
     window.title('Rock, Paper, Scissors against Computer')
     widgets = GUI(window)
-    window.mainloop(__str__,
+    window.mainloop()
 
 def game(p_input):
+    """
+    Takes game.py and makes some of its features compatible with the
+    gui
+    """
     comp_score = 0
     p_score = 0
 #    for i in range(3):
