@@ -36,6 +36,6 @@ class GUI:
         Method that fills in the label when clicked and runs game.py
         """
         thing = self.radio_1.get()
-        p = Game(thing)
+        p = Game(thing, c_input=None)
         self.label.config(text=f'{p}')
         self.radio_1.set('0')
